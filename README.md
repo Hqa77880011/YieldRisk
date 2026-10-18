@@ -47,3 +47,6 @@ python -m yieldrisk.compare --inputs "runs/*/metrics.csv" --reference YieldRisk 
 
 Comparison averages rows within independent units before bootstrap intervals and paired Wilcoxon/Holm inference. For participant/client analyses choose those independent unit columns instead of counting recordings as replicates.
 
+## Selected reproduction setting
+
+Use the self-contained single-lot, reentrant DES with four tool groups, 12 tools and 24 operations, two warmup days and seven scored days. Quality fitting uses 2048/512/512 generated records; the default learning budget is 50000 events with rollout 512 and 20 quality epochs. Qualification, precedence and nonpreemption are the chosen hard-rule set; batch tools and engineering holds are outside this selected factory. No SMT2020 dataset is required. Use the documented prepare/fit/train/run/evaluate workflow and the same evaluation seeds for all methods.

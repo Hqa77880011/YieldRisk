@@ -1,1 +1,30 @@
-{"seed":13,"groups":24,"tools":96,"operations":180,"warmup_days":30,"scored_days":150,"setup_hours":0.1,"processing_sigma":0.2,"max_rework":3,"propagation":0.5,"quality_sizes":[42000,12000,6000],"quality_epochs":50,"learning_rate":0.0003,"batch_size":128,"train_events":20000000,"rollout":2048,"ppo_epochs":4,"discount":0.99,"evaluation_seeds":[1001,1002,1003],"variant":"full"}
+{
+  "seed": 13,
+  "groups": 4,
+  "tools": 12,
+  "operations": 24,
+  "warmup_days": 2,
+  "scored_days": 7,
+  "setup_hours": 0.1,
+  "processing_sigma": 0.2,
+  "max_rework": 3,
+  "propagation": 0.5,
+  "quality_sizes": [
+    2048,
+    512,
+    512
+  ],
+  "quality_epochs": 20,
+  "learning_rate": 0.0003,
+  "batch_size": 128,
+  "train_events": 50000,
+  "rollout": 512,
+  "ppo_epochs": 4,
+  "discount": 0.99,
+  "evaluation_seeds": [
+    1001,
+    1002,
+    1003
+  ],
+  "variant": "full"
+}
