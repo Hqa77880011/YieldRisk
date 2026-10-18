@@ -158,10 +158,10 @@ class Fab:
             parent = lot['parent']
             previous_risk = self.genealogy_nodes[parent]['risk'] if parent in self.genealogy_nodes else 0.
             genealogy = 1 - (1 - low[i]) * (1 - self.c['propagation'] * previous_risk)
-            self.genealogy_nodes[(lot['id'], lot['rework'])] = dict(parent=parent, risk=float(genealogy))
-            lot['genealogy'] = float(genealogy)
             if self.c['variant'] == 'no-genealogy':
                 genealogy = low[i]
+            self.genealogy_nodes[(lot['id'], lot['rework'])] = dict(parent=parent, risk=float(genealogy))
+            lot['genealogy'] = float(genealogy)
             quality = [mean[i], quantile[i], low[i]]
             if self.c['variant'] in ['point-yield', 'mean-hierarchy']:
                 quality = [mean[i], mean[i], float(mean[i] < .85)]
